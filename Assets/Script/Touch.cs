@@ -35,7 +35,14 @@ public class Touch : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
-                other.GetComponent<Chest>().OpenChest();
+                if (ItemList.S.key == true)
+                {
+                    other.GetComponent<Chest>().OpenChest();
+                }
+                else if (ItemList.S.key == false)
+                {
+                    Debug.Log("no key");
+                }
             }
         }
     }
