@@ -6,24 +6,18 @@ public class Touch : MonoBehaviour
 {
     private Material oldColor;
     public Material newColor;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Item")
         {
-            Debug.Log("1");
             oldColor = other.GetComponent<MeshRenderer>().material;
+            Transform[] tc = other.GetComponentsInChildren<Transform>();
+            for (int i = 0; i < tc.Length; i++)
+            {
+                tc[i].GetComponent<MeshRenderer>().material = newColor;
+            }
+            
             other.GetComponent<MeshRenderer>().material = newColor;
         }
     }
@@ -33,8 +27,15 @@ public class Touch : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
-                Debug.Log("2");
+                ItemList.S.GetItem(other.gameObject);
                 other.gameObject.SetActive(false);
+            }
+        }
+        else if (other.tag == "Chest")
+        {
+            if (Input.GetKey(KeyCode.E))
+            {
+                other.GetComponent<Chest>().OpenChest();
             }
         }
     }
@@ -43,7 +44,11 @@ public class Touch : MonoBehaviour
     {
         if (other.tag == "Item")
         {
-            Debug.Log("3");
+            Transform[] tc = other.GetComponentsInChildren<Transform>();
+            for (int i = 0; i < tc.Length; i++)
+            {
+                tc[i].GetComponent<MeshRenderer>().material = oldColor;
+            }
             other.GetComponent<MeshRenderer>().material = oldColor;
         }
     }

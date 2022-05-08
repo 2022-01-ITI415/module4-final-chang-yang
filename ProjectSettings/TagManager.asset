@@ -7,6 +7,8 @@ TagManager:
   - Fire
   - Loader
   - Water
+  - Item
+  - Chest
   layers:
   - Default
   - TransparentFX

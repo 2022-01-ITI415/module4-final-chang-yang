@@ -11,12 +11,6 @@ public class AutoDoor : MonoBehaviour
         mAnimator = GetComponentInChildren<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "Player")
