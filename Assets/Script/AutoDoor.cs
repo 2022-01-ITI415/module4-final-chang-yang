@@ -8,7 +8,7 @@ public class AutoDoor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mAnimator = GetComponent<Animator>();
+        mAnimator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
