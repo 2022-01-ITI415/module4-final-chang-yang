@@ -33,11 +33,12 @@ public class ItemList : MonoBehaviour
         else if (id == 2)
         {
             task.text = "Go to the other island to find the Treasure";
+            Message.S.FindKey();
             key = true;
         }
         else if (id == 3)
         {
-
+            Message.S.FindCoin();
         }
         else if (id == 4)
         {
