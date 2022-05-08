@@ -34,7 +34,14 @@ public class ItemList : MonoBehaviour
         {
             task.text = "Go to the other island to find the Treasure";
             key = true;
+        }
+        else if (id == 3)
+        {
 
+        }
+        else if (id == 4)
+        {
+            Message.S.WinMessage();
         }
     }
 }

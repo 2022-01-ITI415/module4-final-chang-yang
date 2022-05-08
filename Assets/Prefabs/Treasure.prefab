@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 381540114}
   m_Layer: 0
   m_Name: Treasure
-  m_TagString: Treasure
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -748,7 +748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2cbc422bc2b08e44961740aa444f9a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskID: 3
+  taskID: 4
 --- !u!1 &5438411697635590509
 GameObject:
   m_ObjectHideFlags: 0

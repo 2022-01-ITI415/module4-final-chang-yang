@@ -38,6 +38,7 @@ public class Touch : MonoBehaviour
                 if (ItemList.S.key == true)
                 {
                     other.GetComponent<Chest>().OpenChest();
+                    other.tag = "Untagged";
                 }
                 else if (ItemList.S.key == false)
                 {
